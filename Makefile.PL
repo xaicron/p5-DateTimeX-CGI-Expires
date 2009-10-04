@@ -2,7 +2,7 @@ use inc::Module::Install;
 name 'DateTimeX-CGI-Expires';
 all_from 'lib/DateTimeX/CGI/Expires.pm';
 
-# requires '';
+requires 'DateTime';
 
 tests 't/*.t';
 author_tests 'xt';
