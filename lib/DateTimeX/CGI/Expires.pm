@@ -46,7 +46,7 @@ DateTimeX::CGI::Expires - Create DateTime Object from (CGI) expires
   my $dt2 = DateTimeX::CGI::Expires->new('+1M');
   my $dt3 = DateTimeX::CGI::Expires->new('-3h');
   my $dt4 = DateTimeX::CGI::Expires->new('2009-01-01');
-  my $dt5 = DateTimeX::CGI::Expires->new('+5m', 'Asia/Tokyo');
+  my $dt5 = DateTimeX::CGI::Expires->new('+5m', +{time_zone => 'Asia/Tokyo'});
   
   use DateTimeX::CGI::Expires qw/from_expires/;
   
@@ -61,12 +61,12 @@ and Very simple interface.
 
 =over
 
-=item new($expires, [$time_zone])
+=item new($expires, \%options)
 
 create DateTime object from (CGI) expires.
 See also CGI::Util::expires
 
-=item from_expires($expires, [$time_zone])
+=item from_expires($expires, \%options)
 
 alias of new.
 can be export.
